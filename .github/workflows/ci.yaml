@@ -10,11 +10,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Preparar Java 26
-      - uses: actions/setup-java@v4
+        uses: actions/setup-java@v4
         with:
-        distribution: temurin
-        java-version: '26'
-        cache: maven
+          distribution: temurin
+          java-version: '26'
+          cache: maven
 
       - name: Compilar y PROBAR
         run: mvn -B verify
