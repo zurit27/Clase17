@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Traer el codigo
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Preparar Java 26
         uses: actions/setup-java@v4
@@ -20,5 +20,5 @@ jobs:
         run: mvn -B verify
 
       - name: Construir la imagen
-        run: docker build -t clase17:${{ github.sha}} .
+        run: docker build -t clase17:${{ github.sha }} .
   
